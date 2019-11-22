@@ -67,4 +67,45 @@ int main() {
 	reverse(b,e);
 	rotate(b,m,e); // 순차열을 왼쪽으로 회전한다 -> 왼쪽으로 m-b만큼
 
+
+
+
+
+	// 5. sorting algorithm
+	sort(b,e);
+	sort(b,e,f);
+	nth_element(b,m,e); // [b,e)의 원소 중 m-b만큼 선별하여 [b,m) 순차열에 놓이게 한다.
+	nth_element(b,m,e,f);
+
+
+
+
+
+	// 6. sorted range algorithm
+	p = lower_bound(b,e,x); // p는 구간 [b,e)의 순차열에서 x와 같은 첫 원소의 반복자
+	p = lower_bound(b,e,x,f);
+
+	p = upper_bound(b,e,x); // p는 구간 [b,e)의 순차열에서 x보다 큰 첫 원소의 반복자
+	p = upper_bound(b,e,x,f);
+
+	pair<int, int> pr = equal_range(b,e,x); // [lower_bound(),upper_bound())
+	pair<int, int> pr = equal_range(b,e,x,f);
+
+	p = set_union(b,e,b2,e2,t); //[t,p)에 [b,e)와 [b2,e2)의 합집합 저장
+	p = set_union(b,e,b2,e2,t,f);
+
+	p = set_intersection(b,e,b2,e2,t); //[t,p)에 [b,e)와 [b2,e2)의 교집합 저장
+	p = set_intersection(b,e,b2,e2,t,f);
+
+	p = set_difference(b,e,b2,e2,t) //[t,p)에 [b,e)와 [b2,e2)의 차집합 저장
+	p = set_difference(b,e,b2,e2,t,f);  
+
+	
+
+
+
+	// 7. numeric algorithmm
+	int x2 = accumulate(b,e,x); // x를 초깃값으로 시작한 구간 [b,e) 순차열 원소의 합
+	p = partial_sum(b,e,t); // [b,e)의 구간합을 [t,p)에 저장
+	p = partial_sum(b,e,t,f);
 }
